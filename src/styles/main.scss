@@ -57,7 +57,7 @@ h5 {
 .navigating {
   cursor: wait;
 
-  section {
+  [role='main'] {
     opacity: .6;
   }
 }
