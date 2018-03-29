@@ -1,0 +1,25 @@
+@import '~modularscale-sass/stylesheets/modularscale';
+
+$modularscale: (
+  base: 1em,
+  ratio: $minor-third
+);
+
+$scale-largest: ms(3); //1.728em;
+$scale-larger: ms(2); //1.44em;
+$scale-large: ms(1); //1.2em;
+$scale-normal: ms(); //1em;
+$scale-small: ms(-1); //.833em;
+$scale-smaller: ms(-2); //.694em;
+$scale-smallest: ms(-3); //.579em;
+
+$scale-huge: ms(5);
+$scale-tiny: ms(-6);
+
+// @debug($scale-largest);
+// @debug($scale-larger);
+// @debug($scale-large);
+// @debug($scale-normal);
+// @debug($scale-small);
+// @debug($scale-smaller);
+// @debug($scale-smallest);
