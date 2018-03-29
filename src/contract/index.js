@@ -1,15 +1,15 @@
 import { computedFrom, inject } from 'aurelia-framework';
-import { EthService } from '../resources/services/eth';
+import { DataService } from '../resources/services/data';
 
-@inject(EthService)
+@inject(DataService)
 export class ContractIndex {
-  constructor(ethService) {
+  constructor(dataService) {
     this.contracts = [];
 
     this._pagePer = 10;
     this._pageNum = 0;
 
-    this._ethService = ethService;
+    this._dataService = dataService;
   }
 
   @computedFrom('contracts', '_pagePer')
@@ -20,6 +20,7 @@ export class ContractIndex {
   @computedFrom('contracts', '_pagePer', '_pageNum')
   get _pageResults() {
     let items = this.contracts;
+    if (!items) return [];
 
     let compare = function compare(a, b) {
       if (a.name < b.name) return -1;
@@ -36,8 +37,7 @@ export class ContractIndex {
     this._pageNum = page;
   }
 
-  activate(model) {
-    /* TODO: Load list of contracts from somewhere */
-    this.contracts = [];
+  async activate(model, route) {
+    this.contracts = await this._dataService.getContracts();
   }
 }

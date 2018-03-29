@@ -17,7 +17,7 @@ const when = (condition, config, negativeConfig) =>
   condition ? ensureArray(config) : ensureArray(negativeConfig);
 
 // primary config:
-const title = 'Aurelia Navigation Skeleton';
+const title = 'Aurelia dApp Boilerplate';
 const outDir = path.resolve(__dirname, project.platform.output);
 const srcDir = path.resolve(__dirname, 'src');
 const nodeModulesDir = path.resolve(__dirname, 'node_modules');
@@ -99,7 +99,7 @@ module.exports = ({
         exclude: nodeModulesDir,
         options: coverage ? { sourceMap: 'inline', plugins: ['istanbul'] } : {}
       },
-      { test: /\.json$/i, loader: 'json-loader', exclude: nodeModulesDir },
+      // { test: /\.json$/i, loader: 'json-loader' },
       // use Bluebird as the global Promise implementation:
       {
         test: /[\/\\]node_modules[\/\\]bluebird[\/\\].+\.js$/,

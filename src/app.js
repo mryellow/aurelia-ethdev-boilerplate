@@ -22,7 +22,7 @@ export class App {
         title: 'Contracts'
       },
       {
-        route: 'contract/:id',
+        route: 'contract/:symbol',
         name: 'contractDetail',
         moduleId: PLATFORM.moduleName('contract/detail')
       }

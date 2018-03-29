@@ -1,0 +1,100 @@
+{
+  "contracts": [
+    {
+      "name": "Galbi",
+      "symbol": "CONS108",
+      "shop": "0x0e5c8681609560f4e48f6a7d95379e9b68a5b4f3",
+      "object": "0xad5017098e876a277885ae4a2ed3d9d6c7d3d38e"
+    },
+    {
+      "name": "Onigiri",
+      "symbol": "CONS121",
+      "shop": "0x30df266663401f7f6a74e5ad15989340b6d84847",
+      "object": "0x52384c49b7663bebfa6922a8b83f1b231ee79fd4"
+    },
+    {
+      "name": "Sushi",
+      "symbol": "CONS122",
+      "shop": "0x4a1b1d67804d272ba616337a171a93e644f2f672",
+      "object": "0x95986d6ff6edf1e24d4344d6a27aea038be72a7e"
+    },
+    {
+      "name": "Takemitsu",
+      "symbol": "WEAP134",
+      "shop": "0x7b9c37ca42c48e131b81475b3520b81327538b7d",
+      "object": "0xd0c1f00e652046ad0b67290aaa28139c0e66a2ef"
+    },
+    {
+      "name": "Candle",
+      "symbol": "ITEM135",
+      "shop": "0xcd42b7aff4fdce4e02519162a0132dbe81228d70",
+      "object": "0x895b5651afb9de74c8cc3b4f35b80d70c4bbc429"
+    },
+    {
+      "name": "Stone Helmet",
+      "symbol": "HELM136",
+      "shop": "0xd6c3dc9e3a2215083b2956316854488ad6129851",
+      "object": "0x2244e753dd430be8c369f25cd60781112ecfc513"
+    },
+    {
+      "name": "Stone Chest Plate",
+      "symbol": "CHST137",
+      "shop": "0x5f277da6734cb32e182c8252467df39d6ec424b4",
+      "object": "0x12105bd41f403e33d444049884b000cc8d438acb"
+    },
+    {
+      "name": "Stone Legs",
+      "symbol": "LEGS138",
+      "shop": "0x462004b75eb3b6e20fbadeb41a79c20a83cb1789",
+      "object": "0x779ca6843737f0317221abeb2ad67dcb907cac0d"
+    },
+    {
+      "name": "Stone Gauntlets",
+      "symbol": "GLOV139",
+      "shop": "0x8d959ff07a8ea75a51a1cd3d777775bd76a1de84",
+      "object": "0xa26ab66237aa1214b927967404a8c447eda93876"
+    },
+    {
+      "name": "Stone Boots",
+      "symbol": "BOOT140",
+      "shop": "0xc5ce28de7675a3a4518f2f697249f1c90856d0f5",
+      "object": "0x18f59955d64252676033ac6300c3596c61390c97"
+    },
+    {
+      "name": "Meaty Shamrock",
+      "symbol": "RESO142",
+      "shop": "0x7e4e2c2d2848f4ebda8d5b068d3574b1c1a17979",
+      "object": "0xce34dfae1b778d6a646b7ffba0424fd6b3d280b2"
+    },
+    {
+      "name": "Red Envelope",
+      "symbol": "LOOT143",
+      "shop": "0x1a30911af26692c475f94bf5ae1f8f2e9db0fa3e",
+      "object": "0x5a2c659fd2cbaa77c3fa30c062ca7cf7f9d60460"
+    },
+    {
+      "name": "Rope Dart",
+      "symbol": "WEAP146",
+      "shop": "0x4b72acc43c984da449e79fa960e8efd3ef104e05",
+      "object": "0xc168137461b208285cd7598fc97097ae833df5c2"
+    },
+    {
+      "name": "Chain Whip",
+      "symbol": "WEAP147",
+      "shop": "0x0d36ae1a55df83ce573860e36b329b934827536e",
+      "object": "0xafa19aa194abda930af284dce1b1e25514edfa9b"
+    },
+    {
+      "name": "Baozi",
+      "symbol": "CONS151",
+      "shop": "0xdaedb83f24811bf585aaa01e714f6d46951ed6ff",
+      "object": "0x55f65e9c5c1b92378497101fdb73f1bcb584b409"
+    },
+    {
+      "name": "Lotus Root",
+      "symbol": "CONS152",
+      "shop": "0xea37cfd9f93555910157ffa9b0e707f1597087e1",
+      "object": "0xf003f8485bdc85f377827270179a64310ccd26a5"
+    }
+  ]
+}

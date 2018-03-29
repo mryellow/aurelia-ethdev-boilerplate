@@ -2,8 +2,8 @@
 
   <h3>Contract List</h3>
   <ul>
-    <li repeat.for="i of _pageResults.length">
-      <a href.bind="'#/a/' + $parent._pageResults[i]._id" text.bind="$parent._pageResults[i].name"></a>
+    <li repeat.for="item of _pageResults">
+      <a href.bind="'#/contract/' + item.symbol" text.bind="item.name"></a>
     </li>
   </ul>
 
