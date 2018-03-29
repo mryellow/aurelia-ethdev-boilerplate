@@ -1,0 +1,36 @@
+@import 'corners';
+
+// Firefox
+input {
+  box-shadow: none;
+}
+
+[type='button'],
+[type='submit'],
+[type='reset'],
+[type='file'],
+button {
+  @extend %corner-all;
+
+  background: $colour-back-button;
+  border: 1px solid $colour-fore-button;
+  color: $colour-fore-button;
+  font-weight: bold;
+  padding: $scale-tiny $scale-smallest;
+  //margin: $scale-tiny $scale-tiny;
+
+  &:disabled {
+    background: lighten($colour-back-button, 10%);
+    color: lighten($colour-fore-button, 10%);
+  }
+}
+
+/* stylelint-disable no-descending-specificity */
+fieldset {
+  button,
+  input {
+    display: block;
+    margin: $scale-tiny 0;
+  }
+}
+/* stylelint-enable */

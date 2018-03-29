@@ -1,5 +1,6 @@
 @import 'colours';
 @import 'corners';
+@import 'forms';
 @import 'fonts';
 @import 'reset';
 @import 'scale';
@@ -15,9 +16,9 @@ body {
 
 nav {
   li {
-    list-style-type: none;
-    list-style-image: none;
     display: inline-block;
+    list-style-image: none;
+    list-style-type: none;
   }
 }
 
@@ -32,22 +33,9 @@ section {
   padding: $scale-smallest;
 }
 
-fieldset {
-  button,
-  input {
-    display: block;
-    margin: $scale-tiny 0;
-  }
-}
-
-// Firefox
-input {
-  box-shadow: none;
-}
-
 h5 {
-  font-weight: normal;
   font-style: italic;
+  font-weight: normal;
 }
 
 .sr-only {
@@ -70,12 +58,12 @@ h5 {
   cursor: wait;
 
   section {
-    opacity: 0.6;
+    opacity: .6;
   }
 }
 
 .spin {
-  opacity: 0.7;
+  opacity: .7;
   position: fixed;
   right: $scale-huge;
   top: $scale-huge;
@@ -109,26 +97,6 @@ h5 {
       margin: 0;
       text-transform: capitalize;
     }
-  }
-}
-
-input[type='button'],
-input[type='submit'],
-input[type='reset'],
-input[type='file'],
-button {
-  @extend %corner-all;
-
-  background: $colour-back-button;
-  border: 1px solid $colour-fore-button;
-  color: $colour-fore-button;
-  font-weight: bold;
-  padding: $scale-tiny $scale-smallest;
-  //margin: $scale-tiny $scale-tiny;
-
-  &:disabled {
-    background: lighten($colour-back-button, 10%);
-    color: lighten($colour-fore-button, 10%);
   }
 }
 

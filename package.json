@@ -67,6 +67,7 @@
     "protractor": "^5.3.0",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
+    "stylelint-config-standard": "^18.2.0",
     "through2": "^2.0.3",
     "ts-node": "^5.0.1",
     "uglify-js": "^3.3.15",
