@@ -1,7 +1,6 @@
-'use strict';
 const path = require('path');
 
-module.exports = function (config) {
+module.exports = function(config) {
   config.set({
     /**
      * base path that will be used to resolve all patterns (e.g. files, exclude)
@@ -13,22 +12,20 @@ module.exports = function (config) {
      *
      * available frameworks: https://npmjs.org/browse/keyword/karma-adapter
      */
-    frameworks: [ 'jasmine' ],
+    frameworks: ['jasmine'],
 
     /**
      * list of files / patterns to load in the browser
      * we are building the test environment in ./spec-bundle.js
      */
-    files: [
-      { pattern: 'test/karma-bundle.js', watched: false }
-    ],
+    files: [{ pattern: 'test/karma-bundle.js', watched: false }],
 
     /*
      * preprocess matching files before serving them to the browser
      * available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
      */
     preprocessors: {
-      'test/karma-bundle.js': [ 'webpack' ]
+      'test/karma-bundle.js': ['webpack']
     },
 
     webpack: require('../webpack.config')({ coverage: true }),
@@ -39,12 +36,16 @@ module.exports = function (config) {
      * possible values: 'dots', 'progress'
      * available reporters: https://npmjs.org/browse/keyword/karma-reporter
      */
-    reporters: [ 'mocha', 'progress', 'coverage' ],
+    reporters: ['mocha', 'progress', 'coverage'],
 
     coverageReporter: {
-      reporters: [ { type: 'html' }, { type: 'lcovonly' }, { type: 'text-summary' } ],
+      reporters: [
+        { type: 'html' },
+        { type: 'lcovonly' },
+        { type: 'text-summary' }
+      ],
       dir: path.resolve(__dirname, 'coverage-karma'),
-      subdir: '.',
+      subdir: '.'
     },
 
     // Webpack please don't spam the console when running in karma!
@@ -69,14 +70,12 @@ module.exports = function (config) {
      * start these browsers
      * available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
      */
-    browsers: [
-      'Chrome',
-    ],
+    browsers: ['Chrome'],
 
     /*
      * Continuous Integration mode
      * if true, Karma captures browsers, runs the tests and exits
      */
     singleRun: true
-  })
-}
+  });
+};

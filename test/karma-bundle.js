@@ -1,6 +1,6 @@
 import 'aurelia-polyfills';
 import 'aurelia-loader-webpack';
-import {install as installJasmineAsync} from 'jest-jasmine2/jasmine_async';
+import { install as installJasmineAsync } from 'jest-jasmine2/jasmine_async';
 
 // enable running Promise-returning tests:
 installJasmineAsync(global);
@@ -60,7 +60,7 @@ function installJestExpect() {
   jasmine.objectContaining = expect.objectContaining;
   jasmine.arrayContaining = expect.arrayContaining;
   jasmine.stringMatching = expect.stringMatching;
-  jasmine.addMatchers = (jasmineMatchersObject) => {
+  jasmine.addMatchers = jasmineMatchersObject => {
     const jestMatchersObject = Object.create(null);
     Object.keys(jasmineMatchersObject).forEach(name => {
       jestMatchersObject[name] = function() {

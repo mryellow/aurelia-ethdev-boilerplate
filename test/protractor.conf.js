@@ -7,9 +7,7 @@ exports.config = {
 
   // use `npm start -- e2e`
 
-  specs: [
-    '**/*.e2e.js'
-  ],
+  specs: ['**/*.e2e.js'],
 
   exclude: [],
 
@@ -30,9 +28,9 @@ exports.config = {
   directConnect: true,
 
   capabilities: {
-    'browserName': 'chrome',
-    'chromeOptions': {
-      'args': [
+    browserName: 'chrome',
+    chromeOptions: {
+      args: [
         '--show-fps-counter',
         '--no-default-browser-check',
         '--no-first-run',
@@ -41,7 +39,7 @@ exports.config = {
         '--disable-translate',
         '--disable-background-timer-throttling',
         '--disable-renderer-backgrounding',
-        '--disable-device-discovery-notifications',
+        '--disable-device-discovery-notifications'
         /* enable these if you'd like to test using Chrome Headless
           '--no-gpu',
           '--headless'
@@ -56,7 +54,9 @@ exports.config = {
     require('babel-register');
   },
 
-  plugins: [{
-    package: 'aurelia-protractor-plugin'
-  }],
+  plugins: [
+    {
+      package: 'aurelia-protractor-plugin'
+    }
+  ]
 };
