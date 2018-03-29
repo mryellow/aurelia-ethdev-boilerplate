@@ -1,11 +1,20 @@
 <template>
   <require from="./styles/main.scss"></require>
 
-  <nav>
-    <ul repeat.for="nav of router.navigation">
-      <li class="${nav.isActive ? 'active' : ''}"><a href.bind="nav.href">${nav.title}</a></li>
-    </ul>
-  </nav>
+  <header>
+    <require from="./nav-bar.html"></require>
+    <nav-bar router.bind="router"></nav-bar>
 
-  <router-view></router-view>
+    <compose view="./flash.html"></compose>
+    <compose view="./spin.html"></compose>
+    <h1 class="center">${router.title}</h1>
+  </header>
+
+  <div role="main">
+    <router-view class="${router.isNavigating ? 'navigating' : ''}"></router-view>
+  </div>
+
+  <footer>
+    <h5 class="center"><a href="https://reddit.com/r/ethdev">/r/ethdev</a></h5>
+  </footer>
 </template>

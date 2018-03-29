@@ -1,2 +1,18 @@
 <template>
+
+  <h3>Contract List</h3>
+  <ul>
+    <li repeat.for="i of _pageResults.length">
+      <a href.bind="'#/a/' + $parent._pageResults[i]._id" text.bind="$parent._pageResults[i].name"></a>
+    </li>
+  </ul>
+
+  <nav>
+    <ul if.bind="_pageCount > 1">
+      <li repeat.for="page of _pageCount">
+        <button click.delegate="goPage(page)">${page+1}</button>
+      </li>
+    </ul>
+  </nav>
+
 </template>

@@ -21,6 +21,11 @@ nav {
   }
 }
 
+[role='main'] {
+  margin: $scale-large;
+  padding: $scale-smallest;
+}
+
 section {
   border: 1px solid $colour-border;
   margin: $scale-large;

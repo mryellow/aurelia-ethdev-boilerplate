@@ -1,0 +1,10 @@
+<template>
+
+  <div class="flash">
+    <div class="corner-all" class.bind="flash.status" repeat.for="flash of _flashService.flashes">
+      <h4>${flash.status}</h4>
+      ${flash.message}
+    </div>
+  </div>
+
+</template>
