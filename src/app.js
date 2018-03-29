@@ -1,14 +1,6 @@
 import { PLATFORM } from 'aurelia-pal';
-import { inject } from 'aurelia-framework';
-import { EthService } from './resources/services/eth';
 
-@inject(EthService)
 export class App {
-  constructor(ethService) {
-    this._ethService = ethService;
-    // this.message = 'Hello World!';
-  }
-
   configureRouter(config, router) {
     this.router = router;
     config.title = 'Aurelia';
