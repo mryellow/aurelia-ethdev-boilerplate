@@ -8,6 +8,133 @@
 @import url('https://fonts.googleapis.com/css?family=Questrial');
 @import url('https://fonts.googleapis.com/css?family=Sanchez:400italic,400');
 
-.stuff {
-  font-size: $scale-large;
+body {
+  background: $colour-back;
+  color: $colour-fore;
+}
+
+nav {
+  li {
+    list-style-type: none;
+    list-style-image: none;
+    display: inline-block;
+  }
+}
+
+section {
+  border: 1px solid $colour-border;
+  margin: $scale-large;
+  padding: $scale-smallest;
+}
+
+fieldset {
+  button,
+  input {
+    display: block;
+    margin: $scale-tiny 0;
+  }
+}
+
+// Firefox
+input {
+  box-shadow: none;
+}
+
+h5 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+.sr-only {
+  display: none;
+}
+
+//.fa {
+//  vertical-align: middle;
+//}
+
+.center {
+  text-align: center;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.navigating {
+  cursor: wait;
+
+  section {
+    opacity: 0.6;
+  }
+}
+
+.spin {
+  opacity: 0.7;
+  position: fixed;
+  right: $scale-huge;
+  top: $scale-huge;
+}
+
+.has-error {
+  border: 1px solid $colour-back-error;
+}
+
+.msg-error {
+  color: $colour-back-error;
+  font-size: $scale-smaller;
+}
+
+.flash {
+  position: fixed;
+
+  > div {
+    background: $colour-back-success;
+    border: 1px solid $colour-border;
+    color: $colour-fore-success;
+    margin: $scale-smallest;
+    padding: $scale-normal;
+
+    &.error {
+      background: $colour-back-error;
+      color: $colour-fore-error;
+    }
+
+    h4 {
+      margin: 0;
+      text-transform: capitalize;
+    }
+  }
+}
+
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+input[type='file'],
+button {
+  @extend %corner-all;
+
+  background: $colour-back-button;
+  border: 1px solid $colour-fore-button;
+  color: $colour-fore-button;
+  font-weight: bold;
+  padding: $scale-tiny $scale-smallest;
+  //margin: $scale-tiny $scale-tiny;
+
+  &:disabled {
+    background: lighten($colour-back-button, 10%);
+    color: lighten($colour-fore-button, 10%);
+  }
+}
+
+a {
+  color: $colour-link;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0 $scale-tiny;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
