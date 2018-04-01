@@ -4,6 +4,7 @@ import { DataService } from '../resources/services/data';
 @inject(DataService)
 export class ContractIndex {
   constructor(dataService) {
+    console.log('ContractIndex', 'constructor', dataService);
     this.contracts = [];
 
     this._pagePer = 10;
@@ -38,6 +39,7 @@ export class ContractIndex {
   }
 
   async activate(model, route) {
+    console.log('activate', model, route, this._dataService);
     this.contracts = await this._dataService.getContracts();
   }
 }
