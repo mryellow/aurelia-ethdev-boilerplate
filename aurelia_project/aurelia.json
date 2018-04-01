@@ -29,9 +29,7 @@
     "displayName": "Babel",
     "fileExtension": ".js",
     "options": {
-      "plugins": [
-        "transform-es2015-modules-amd"
-      ]
+      "plugins": ["transform-es2015-modules-amd"]
     }
   },
   "markupProcessor": {
@@ -62,6 +60,7 @@
     "root": "src",
     "resources": "resources",
     "elements": "resources/elements",
+    "services": "resources/services",
     "attributes": "resources/attributes",
     "valueConverters": "resources/value-converters",
     "bindingBehaviors": "resources/binding-behaviors"

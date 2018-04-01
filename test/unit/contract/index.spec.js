@@ -1,17 +1,37 @@
-import mochaAsync from '../../async-wrapper';
+import { StageComponent } from 'aurelia-testing';
+import { bootstrap } from 'aurelia-bootstrapper';
 import { ContractIndex } from '../../../src/contract/index';
+import { Container } from 'aurelia-dependency-injection';
+import { DataService } from '../../../src/resources/services/data';
+
+import mochaAsync from '../../async-wrapper';
 
 describe('ContractIndex', () => {
-  let metaMain;
+  let component;
+  let container;
+  let viewModel;
+  let dataService;
+
   beforeEach(() => {
-    metaMain = new ContractIndex();
+    container = new Container();
+    dataService = container.get(DataService);
+    viewModel = container.get(ContractIndex);
+    component = StageComponent.withResources()
+      .inView('<router-view></router-view>')
+      .boundTo(viewModel);
   });
+
+  /*
+  afterEach(() => {
+    viewModel.dispose();
+  });
+  */
 
   describe('properties', () => {
     it(
       'it has a contracts',
       mochaAsync(async () => {
-        const res = await metaMain.contracts;
+        const res = await viewModel.contracts;
         expect(Array.isArray(res)).toBe(true);
       })
     );
@@ -21,10 +41,10 @@ describe('ContractIndex', () => {
     it(
       'should load contracts',
       mochaAsync(async () => {
-        await metaMain.activate();
-        const res = await metaMain.contracts;
+        await viewModel.activate();
+        const res = await viewModel.contracts;
         expect(Array.isArray(res)).toBe(true);
-        expect(res.length).toBe(0);
+        expect(res.length).toBe(16);
         // expect(res).toBe([]);
       })
     );
