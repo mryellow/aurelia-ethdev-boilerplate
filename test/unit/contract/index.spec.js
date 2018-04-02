@@ -28,29 +28,22 @@ describe('ContractIndex', () => {
   */
 
   describe('properties', () => {
-    it(
-      'it has a contracts',
-      mochaAsync(async () => {
-        const res = await viewModel.contracts;
-        expect(Array.isArray(res)).toBe(true);
-      })
-    );
+    it('it has a contracts', () => {
+      expect(viewModel.contracts).toBeInstanceOf(Array);
+      expect(viewModel).toHaveProperty('contracts', []);
+    });
 
-    it(
-      'it has a _pagePer',
-      mochaAsync(async () => {
-        const res = await viewModel._pagePer;
-        expect(res).toBe(10);
-      })
-    );
+    it('it has a _pagePer', () => {
+      expect(viewModel).toHaveProperty('_pagePer', 10);
+    });
 
-    it(
-      'it has a _pageNum',
-      mochaAsync(async () => {
-        const res = await viewModel._pageNum;
-        expect(res).toBe(0);
-      })
-    );
+    it('it has a _pageNum', () => {
+      expect(viewModel).toHaveProperty('_pageNum', 0);
+    });
+
+    it('it has a _dataService', () => {
+      expect(viewModel).toHaveProperty('_dataService');
+    });
   });
 
   describe('activate', () => {
@@ -59,9 +52,8 @@ describe('ContractIndex', () => {
       mochaAsync(async () => {
         await viewModel.activate();
         const res = await viewModel.contracts;
-        expect(Array.isArray(res)).toBe(true);
-        expect(res.length).toBe(16);
-        // expect(res).toBe([]);
+        expect(res).toBeInstanceOf(Array);
+        expect(res).toHaveLength(16);
       })
     );
   });
@@ -72,8 +64,8 @@ describe('ContractIndex', () => {
       mochaAsync(async () => {
         await viewModel.activate();
         const res = await viewModel._pageResults;
-        expect(Array.isArray(res)).toBe(true);
-        expect(res.length).toBe(10);
+        expect(res).toBeInstanceOf(Array);
+        expect(res).toHaveLength(10);
       })
     );
   });
@@ -106,8 +98,8 @@ describe('ContractIndex', () => {
         await viewModel.activate();
         await viewModel.goPage(1);
         const res = await viewModel._pageResults;
-        expect(Array.isArray(res)).toBe(true);
-        expect(res.length).toBe(6);
+        expect(res).toBeInstanceOf(Array);
+        expect(res).toHaveLength(6);
       })
     );
   });

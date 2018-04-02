@@ -13,12 +13,13 @@ export class EthService {
       );
     }
 
+    /*
     if (typeof this.web3 === 'undefined') {
       console.log('Web3 Not Found');
-      return;
+    } else {
+      console.log('Web3 Initalised');
     }
-
-    console.log('Web3 Initalised');
+    */
 
     this._abis = {
       erc20: [
@@ -121,6 +122,7 @@ export class EthService {
 
   getContract(abi, addr) {
     if (!abi || !addr) throw new Error('Required arguments invalid');
+    if (!this.web3) throw new Error('Web3 not Initalised');
     return new this.web3.eth.Contract(this._abis[abi], addr);
   }
 }

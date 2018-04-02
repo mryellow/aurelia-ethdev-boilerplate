@@ -24,7 +24,17 @@ describe('App', () => {
       .boundTo(viewModel);
   });
 
-  it('has no message', () => {
-    expect(typeof viewModel.message).toBe('undefined');
+  describe('properties', () => {
+    it('has no message', () => {
+      expect(viewModel.message).toBeUndefined();
+    });
+
+    it('it has a _flashService', () => {
+      expect(viewModel).toHaveProperty('_flashService');
+    });
+
+    it('it has a _spinService', () => {
+      expect(viewModel).toHaveProperty('_spinService');
+    });
   });
 });
