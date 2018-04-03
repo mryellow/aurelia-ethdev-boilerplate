@@ -1,16 +1,28 @@
+import environment from '../../environment';
 import Web3 from 'web3';
 
 export class EthService {
   constructor() {
+    this.readonly = false;
+
     if (typeof window.web3 !== 'undefined') {
       console.log('Web3 using currentProvider');
       this.web3 = new Web3(window.web3.currentProvider);
     } else {
-      console.log('Web3 using HttpProvider');
-      // set the provider you want from Web3.providers
-      this.web3 = new Web3(
-        new Web3.providers.HttpProvider('http://localhost:8545')
-      );
+      // TODO: Warn user that MetaMask is required? Only for read/write functions?
+
+      if (environment.debug || environment.testing) {
+        console.log('Web3 using HttpProvider (local)');
+        this.web3 = new Web3(
+          new Web3.providers.HttpProvider('http://localhost:8545')
+        );
+      } else {
+        console.log('Web3 using WebsocketProvider (mainnet)');
+        this.web3 = new Web3(
+          new Web3.providers.WebsocketProvider('wss://mainnet.infura.io/ws')
+        );
+      }
+      this.readonly = true;
     }
 
     /*
