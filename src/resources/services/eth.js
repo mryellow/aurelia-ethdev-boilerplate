@@ -11,27 +11,22 @@ export class EthService {
     } else {
       // TODO: Warn user that MetaMask is required? Only for read/write functions?
 
-      if (environment.debug || environment.testing) {
+      if (environment.testing) {
         console.log('Web3 using HttpProvider (local)');
         this.web3 = new Web3(
           new Web3.providers.HttpProvider('http://localhost:8545')
         );
       } else {
-        console.log('Web3 using WebsocketProvider (mainnet)');
+        const network = environment.debug ? 'ropsten' : 'mainnet';
+        console.log('Web3 using WebsocketProvider (' + network + ')');
         this.web3 = new Web3(
-          new Web3.providers.WebsocketProvider('wss://mainnet.infura.io/ws')
+          new Web3.providers.WebsocketProvider(
+            'wss://' + network + '.infura.io/ws'
+          )
         );
       }
       this.readonly = true;
     }
-
-    /*
-    if (typeof this.web3 === 'undefined') {
-      console.log('Web3 Not Found');
-    } else {
-      console.log('Web3 Initalised');
-    }
-    */
 
     this._abis = {
       erc20: [
