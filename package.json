@@ -70,7 +70,7 @@
     "style-loader": "0.20.3",
     "stylelint-config-standard": "18.2.0",
     "through2": "2.0.3",
-    "ts-node": "5.0.1",
+    "ts-node": "6.2.0",
     "uglify-js": "3.3.21",
     "url-loader": "1.0.1",
     "vinyl-fs": "3.0.2",
