@@ -18,7 +18,7 @@
     "@types/jasmine": "2.8.6",
     "aurelia-cli": "0.33.1",
     "aurelia-protractor-plugin": "1.0.6",
-    "aurelia-testing": "1.0.0-beta.4.0.0",
+    "aurelia-testing": "1.1.0",
     "aurelia-tools": "2.0.0",
     "aurelia-webpack-plugin": "3.0.0-rc.1",
     "babel-core": "6.26.0",
