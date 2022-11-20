@@ -71,7 +71,7 @@
     "stylelint-config-standard": "18.2.0",
     "through2": "2.0.3",
     "ts-node": "5.0.1",
-    "uglify-js": "3.3.21",
+    "uglify-js": "3.17.4",
     "url-loader": "1.0.1",
     "vinyl-fs": "3.0.2",
     "wait-on": "2.1.0",
