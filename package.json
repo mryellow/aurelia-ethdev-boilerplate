@@ -75,7 +75,7 @@
     "url-loader": "1.0.1",
     "vinyl-fs": "3.0.2",
     "wait-on": "2.1.0",
-    "web3": "1.0.0-beta.33",
+    "web3": "1.8.1",
     "webpack": "4.5.0",
     "webpack-bundle-analyzer": "2.11.1",
     "webpack-cli": "2.0.14",
